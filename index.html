@@ -1,38 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <title>Ajmaine Live Player</title>
+  <meta charset="utf-8" />
+  <title>Ajmaine — Live DASH Playlist Player</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.8.5/shaka-player.compiled.js"></script>
   <style>
-    body { background:#000; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column; }
-    video { width:90%; max-width:900px; height:auto; border:2px solid #00ff99; border-radius:10px; }
-    input,button { margin-top:15px; padding:10px; border:none; border-radius:8px; font-size:16px; }
-    button { background:#00ff99; color:#000; cursor:pointer; }
+    :root{--bg:#071019;--card:#0b1b26;--accent:#00ff99;--muted:#9fb6c2}
+    body{margin:0; font-family:Inter,ui-sans-serif,system-ui; background:var(--bg); color:#e6f7f1; display:flex; align-items:flex-start; justify-content:center; min-height:100vh; padding:28px;}
+    .wrap{width:100%; max-width:1000px}
+    header{display:flex; align-items:center; gap:16px; margin-bottom:16px}
+    h1{font-size:20px; margin:0}
+    p.sub{margin:0; color:var(--muted); font-size:13px}
+    .player-card{background:var(--card); border-radius:12px; padding:14px; box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    video{width:100%; height:520px; max-height:65vh; background:#000; border-radius:8px; outline:2px solid rgba(0,0,0,0.4)}
+    .controls{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap}
+    .server-btn{background:transparent; border:1px solid rgba(255,255,255,0.06); color:#dfffee; padding:8px 10px; border-radius:8px; cursor:pointer}
+    .server-btn.active{border-color:var(--accent); box-shadow:0 6px 18px rgba(0,255,153,0.06)}
+    .right{display:flex; gap:8px; margin-left:auto}
+    .input-url{width:100%; margin-top:10px; display:flex; gap:8px}
+    input[type="text"]{flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#eafaf0}
+    button.primary{background:var(--accent); color:#001; border:none; padding:10px 12px; border-radius:8px; cursor:pointer}
+    .note{color:var(--muted); font-size:13px; margin-top:8px}
+    .error{background:#6b1b1b; color:#ffdede; padding:8px 10px; border-radius:8px; margin-top:8px; display:none}
+    .bottom-actions{display:flex; gap:8px; margin-top:12px; align-items:center}
+    @media(max-width:640px){ video{height:260px} header{flex-direction:column; align-items:flex-start} .right{margin-left:0} }
   </style>
 </head>
 <body>
-  <h2>🎥 Ajmaine Live DASH Player</h2>
-  <video id="video" controls autoplay></video>
-  <input type="text" id="mpdUrl" placeholder="এখানে .mpd লিংক দিন" size="60">
-  <button onclick="loadStream()">▶️ প্লে করুন</button>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>🎥 Ajmaine Live DASH Player</h1>
+        <p class="sub">Server বাটন থেকে .mpd লোড করো — Download M3U বাটন দিয়ে Playlist নাও।</p>
+      </div>
+      <div class="right">
+        <button id="downloadM3U" class="primary">⬇️ Download M3U</button>
+      </div>
+    </header>
+
+    <div class="player-card">
+      <video id="video" controls playsinline></video>
+
+      <div class="input-url">
+        <input id="mpdInput" type="text" placeholder="এখানে .mpd বা .m3u8 URL বসাও (Demo: DASH non-DRM আছে)।" />
+        <button id="playBtn" class="primary">▶️ প্লে</button>
+      </div>
+
+      <div style="margin-top:12px;">
+        <strong>Servers:</strong>
+        <div class="controls" id="serverRow">
+          <!-- server buttons injected by JS -->
+        </div>
+      </div>
+
+      <div class="bottom-actions">
+        <button id="loadDemo" class="server-btn">🔁 Demo (non-DRM) Play</button>
+        <div style="margin-left:8px;color:var(--muted)">Demo দিয়ে প্লেয়ার কাজ করছে কিনা চেক করো।</div>
+      </div>
+
+      <div id="errorBox" class="error"></div>
+      <div class="note">⚠️ DRM-protected `.mpd` (Widevine/PlayReady) হলে ব্রাউজারে লাইসেন্স না থাকলে প্লে হবে না।</div>
+    </div>
+  </div>
 
   <script>
-    async function initPlayer() {
-      window.player = new shaka.Player(document.getElementById('video'));
-      player.addEventListener('error', e => console.error('Error:', e));
+    // শুরুতে সার্ভারগুলোর লিস্ট — তোমার দেওয়া লিংকগুলো এখানে রাখছি
+    const servers = [
+      {title: "Fancode S1", url: "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/inpyms8ezu/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd"},
+      {title: "Fancode",   url: "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fdb3pubmek/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd"},
+      {title: "beIN Sports",url: "https://aba5sdmaaaaaaaamooyrewxky2c4j.otte.live.cf.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd"},
+      {title: "LaLiga TV2", url: "https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/dash/enc/tcninbbnt5/out/v1/7668f47d28e345979c072e361f3d3ce3/cenc.mpd"}
+    ];
+
+    // Demo non-DRM DASH for testing:
+    const demoUrl = "https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd";
+
+    // শাকা প্লেয়ার ইনিশিয়ালাইজ
+    let player;
+    async function initShaka() {
+      shaka.polyfill.installAll();
+      if (!shaka.Player.isBrowserSupported()) {
+        showError("Your browser does not support Shaka Player.");
+        return;
+      }
+      const video = document.getElementById('video');
+      player = new shaka.Player(video);
+      player.addEventListener('error', onShakaError);
     }
-    async function loadStream() {
-      const url = document.getElementById('mpdUrl').value;
+    function onShakaError(event) {
+      const e = event.detail;
+      console.error("Shaka error", e);
+      showError("Shaka Error: " + (e?.message || JSON.stringify(e)));
+    }
+
+    // UI: সার্ভার বাটন তৈরি
+    function renderServerButtons() {
+      const row = document.getElementById('serverRow');
+      row.innerHTML = "";
+      servers.forEach((s, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'server-btn';
+        btn.innerText = s.title;
+        btn.title = s.url;
+        btn.onclick = () => { selectServer(i, btn); };
+        row.appendChild(btn);
+      });
+    }
+    function selectServer(index, btn) {
+      // active styling
+      document.querySelectorAll('#serverRow .server-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const url = servers[index].url;
+      document.getElementById('mpdInput').value = url;
+      loadUrl(url);
+    }
+
+    // লোড/প্লে ফাংশন
+    async function loadUrl(url) {
+      clearError();
+      if (!player) { await initShaka(); }
       try {
         await player.load(url);
-        alert("✅ স্ট্রিম লোড সম্পন্ন!");
-      } catch (e) {
-        alert("❌ স্ট্রিম চালু হয়নি!");
-        console.error(e);
+        console.log("Loaded:", url);
+      } catch (err) {
+        console.error(err);
+        showError("স্ট্রিম লোড হয়নি — সম্ভবত DRM protected বা CORS issue: " + (err.message||err));
       }
     }
-    document.addEventListener('DOMContentLoaded', initPlayer);
+
+    // error handling UI
+    function showError(msg) {
+      const e = document.getElementById('errorBox');
+      e.style.display = 'block';
+      e.innerText = msg;
+    }
+    function clearError() {
+      const e = document.getElementById('errorBox');
+      e.style.display = 'none';
+      e.innerText = '';
+    }
+
+    // M3U জেনারেট এবং ডাউনলোড
+    function downloadM3U() {
+      let content = "#EXTM3U\n";
+      servers.forEach(s=>{
+        content += `#EXTINF:-1, ${s.title}\n${s.url}\n\n`;
+      });
+      const blob = new Blob([content], {type:'application/x-mpegURL'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = "AjmaineSports.m3u";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // DOM event bindings
+    document.addEventListener('DOMContentLoaded', async () => {
+      renderServerButtons();
+      await initShaka();
+      document.getElementById('playBtn').onclick = () => {
+        const url = document.getElementById('mpdInput').value.trim();
+        if (!url) { showError("প্রথমে .mpd বা .m3u8 URL বসাও."); return; }
+        loadUrl(url);
+      };
+      document.getElementById('loadDemo').onclick = () => {
+        document.getElementById('mpdInput').value = demoUrl;
+        loadUrl(demoUrl);
+      };
+      document.getElementById('downloadM3U').onclick = downloadM3U;
+    });
   </script>
 </body>
 </html>
