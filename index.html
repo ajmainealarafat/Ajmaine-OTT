@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajmaine Live Player</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.8.5/shaka-player.compiled.js"></script>
+  <style>
+    body { background:#000; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column; }
+    video { width:90%; max-width:900px; height:auto; border:2px solid #00ff99; border-radius:10px; }
+    input,button { margin-top:15px; padding:10px; border:none; border-radius:8px; font-size:16px; }
+    button { background:#00ff99; color:#000; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h2>🎥 Ajmaine Live DASH Player</h2>
+  <video id="video" controls autoplay></video>
+  <input type="text" id="mpdUrl" placeholder="এখানে .mpd লিংক দিন" size="60">
+  <button onclick="loadStream()">▶️ প্লে করুন</button>
 
+  <script>
+    async function initPlayer() {
+      window.player = new shaka.Player(document.getElementById('video'));
+      player.addEventListener('error', e => console.error('Error:', e));
+    }
+    async function loadStream() {
+      const url = document.getElementById('mpdUrl').value;
+      try {
+        await player.load(url);
+        alert("✅ স্ট্রিম লোড সম্পন্ন!");
+      } catch (e) {
+        alert("❌ স্ট্রিম চালু হয়নি!");
+        console.error(e);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', initPlayer);
+  </script>
+</body>
+</html>
