@@ -15,7 +15,7 @@ http://xxip9.top:8080/live/7656691303/chrisbolden765%40icloud.com/58847.m3u8
 #EXTINF:-1 tvg-id="ts246" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/fancodetv.jpg" group-title="Ajmaine OTT",Fancode Live 1
 https://bd-mc-fdlive.fancode.com/mumbai/137702_english_hls_a99a194daf68548ta-di_h264/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/fancodetv.jpg" group-title="Ajmaine OTT",TNT SPORTS 1
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tntsports1.jpg" group-title="Ajmaine OTT",TNT SPORTS 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=d0f2e5c39e70c18f29bf77768a1ad89a:d6853c51fcf37a18905f0609972395d7
@@ -90,4 +90,5 @@ http://178.23.88.55/Sport1/index.m3u8
 https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c0VuZ2xpc2hfSExT/playlist.m3u8?ads.wurl_channel=1781&ads.wurl_name=FIFAPlusEnglish
 
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
+
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
