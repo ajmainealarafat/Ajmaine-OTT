@@ -1,12 +1,12 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="LaLiga" tvg-logo="https://example.com/logo-laliga.png" group-title="Football", M La Liga 🇪🇸
+#EXTINF:-1 tvg-id="LaLiga" tvg-logo="https://ajmaine-al-arafat.ct.ws/laliganew.jpg" group-title="Football", M La Liga 🇪🇸
 https://tiger-hub.vercel.app/LaLiga_TV/tracks-v1a1/mono.m3u8
 
-#EXTINF:-1 tvg-id="Dazn1" tvg-logo="https://example.com/logo-dazn1.png" group-title="Football", Dazn 1 🇵🇹
+#EXTINF:-1 tvg-id="Dazn1" tvg-logo="https://ajmaine-al-arafat.ct.ws/dazn1.jpg" group-title="Football", Dazn 1 🇵🇹
 http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2531/index.m3u8
 
-#EXTINF:-1 tvg-id="ArenaSports2" tvg-logo="https://example.com/logo-arenasports2.png" group-title="Football", Arena Sports Premium 2
+#EXTINF:-1 tvg-id="ArenaSports2" tvg-logo="https://ajmaine-al-arafat.ct.ws/arenapremium.jpg" group-title="Football", Arena Sports Premium 2
 https://tiger-hub.vercel.app/Arena-Sports/Premium_2/tracks-v1a1/mono.ts.m3u8
 
 #EXTINF:-1 tvg-id="KSports1" tvg-logo="https://example.com/logo-ksports1.png" group-title="Football", K Sports 1 🌏
@@ -107,6 +107,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
