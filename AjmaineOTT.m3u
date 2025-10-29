@@ -1,5 +1,11 @@
 #EXTM3U
 
+#EXTINF:-1  tvg-id="DAZN.LALIGA.es" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/laliga-tv-uk.png?raw=true" group-title="DaddyLive UK",LaLigaTV UK
+http://drewlive24.duckdns.org:4123?url=https%3A%2F%2Fwindnew.newkso.ru%2Fwind%2Fpremium276%2Fmono.m3u8&data=T3JpZ2luPWh0dHBzOi8vanhveGtwbGF5Lnh5enxSZWZlcmVyPWh0dHBzOi8vanhveGtwbGF5Lnh5ei98VXNlci1BZ2VudD1Nb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0OyBydjoxNDMuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xNDMuMA%3D%3D
+
+#EXTINF:-1  tvg-id="SkySportsPremierLeague.uk" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-premier-league-hz-uk.png?raw=true" group-title="DaddyLive UK",Sky Sports Premier League
+http://drewlive24.duckdns.org:4123?url=https%3A%2F%2Fdokko1new.newkso.ru%2Fdokko1%2Fpremium130%2Fmono.m3u8&data=T3JpZ2luPWh0dHBzOi8vanhveGtwbGF5Lnh5enxSZWZlcmVyPWh0dHBzOi8vanhveGtwbGF5Lnh5ei98VXNlci1BZ2VudD1Nb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0OyBydjoxNDMuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xNDMuMA%3D%3D
+
 #EXTINF:-1  tvg-id="DAZN.1.pt" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/belgium/dazn-1-be.png?raw=true" group-title="DaddyLive Global Sports",DAZN 1
 http://drewlive24.duckdns.org:4123?url=https%3A%2F%2Fddy6new.newkso.ru%2Fddy6%2Fpremium455%2Fmono.m3u8&data=T3JpZ2luPWh0dHBzOi8vanhveGtwbGF5Lnh5enxSZWZlcmVyPWh0dHBzOi8vanhveGtwbGF5Lnh5ei98VXNlci1BZ2VudD1Nb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0OyBydjoxNDMuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xNDMuMA%3D%3D
 #EXTINF:-1  tvg-id="DAZN.2.pt" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/belgium/dazn-2-be.png?raw=true" group-title="DaddyLive Global Sports",DAZN 2
@@ -106,6 +112,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
