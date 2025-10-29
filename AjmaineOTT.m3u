@@ -1,0 +1,93 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="LIVEFOOTBALL" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/RMTV.jpg" group-title="Ajmaine OTT",Real Madrid TV
+https://rmtv.akamaized.net/hls/live/2043154/rmtv-en-web/bitrate_3.m3u8
+
+#EXTINF:-1 tvg-id="BeinSportsExtra" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/beinextratv.jpg" group-title="Ajmaine OTT",CR | Bein Sports Extra
+https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
+
+#EXTINF:-1 tvg-id="starsports2hd.in" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/starsport2.jpg" group-title="Ajmaine OTT",CR | Star Sports 2 HD
+http://link.luckonline.eu/live/Ali130225/Cpyej2JL56Xy/1370.m3u8
+
+#EXTINF:-1 tvg-id="WillowExtraHD" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/willoextratv.jpg" group-title="Ajmaine OTT",Live | Willow Extra HD
+http://xxip9.top:8080/live/7656691303/chrisbolden765%40icloud.com/58847.m3u8
+
+#EXTINF:-1 tvg-id="ts246" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/fancodetv.jpg" group-title="Ajmaine OTT",Fancode Live 1
+https://bd-mc-fdlive.fancode.com/mumbai/137702_english_hls_a99a194daf68548ta-di_h264/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/fancodetv.jpg" group-title="Ajmaine OTT",TNT SPORTS 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d0f2e5c39e70c18f29bf77768a1ad89a:d6853c51fcf37a18905f0609972395d7
+https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tntsports1.jpg" group-title="Ajmaine OTT",TNT SPORTS 4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=192b1115da041585c77200128549efa1:634e10efe4abbb14be400a3ccbac0258
+https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/i2pcjr4pe5/out/v1/912e9db56d75403b8a9ac0a719110f36/cenc.mpd
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/fancodetv.jpg" group-title="Ajmaine OTT",Fancode 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7e9239c1982d984a002df3ed049d0756:1b8a17598129a3618535c8fb05f103fe
+https://a204aivottepl-a.akamaihd.net/sin-nitro/live/clients/dash/enc/fdb3pubmek/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/fancodetv.jpg" group-title="Ajmaine OTT",Fancode 3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=065051b99bf5cf8d9a3bde5cbde6aaf9:214bd176832872339ce184338320f9a2
+https://a166aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/clients/dash/enc/inpyms8ezu/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
+http://10.16.100.213:8080/hls/tsports.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
+http://10.16.100.206:8080/hls/tsports.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
+http://116.204.149.16/t_sports/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
+http://103.151.60.204/T-Sports/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tapmadtv.jpg" group-title="Ajmaine OTT",TAPMAD
+https://premierleagpl23.akamaized.net/hls/live/2107108/TapSerie-1@2025/master.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/shoqtv.jpg" group-title="Ajmaine OTT",Shoq Tv ICC Womens Cup
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a6dfc4f17d70d8d07639659193f03b25:893eacfabe386144b81733d622a7ad17
+https://live.shoq.com.pk/live/eds/ICC_Women_World_Cup_2025/DASH/ICC_Women_World_Cup_2025.mpd
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/starsports1.jpg" group-title="Ajmaine OTT",Star Sports 1 HD
+http://41.205.93.154/STARSPORTS1/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/starsports1.jpg" group-title="Ajmaine OTT",Star Sports 1 Hindi
+http://116.90.120.149:8000/play/a0bv/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/starsports1.jpg" group-title="Ajmaine OTT",Star Sports 2 Hindi
+http://116.90.120.149:8000/play/a0cs/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/starsportsselecet2.jpg" group-title="Ajmaine OTT",Star Sports Select 2 HD
+http://116.90.120.149:8000/play/a0cm/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT",T Sports HD
+http://116.204.149.16/t_sports/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/Atvsports.jpg" group-title="Ajmaine OTT",A Sports Live
+http://nayatv.ydns.eu:80/freecric/cricfree/12026.ts
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/PtvSports.jpg" group-title="Ajmaine OTT",PTV Sports
+http://66.102.120.18:8000/play/a04w/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/Sports1.jpg" group-title="Ajmaine OTT",Sport 1 HD
+http://178.23.88.55/Sport1/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/Fifa+Tv.jpg" group-title="Ajmaine OTT",FIFA+ English
+https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c0VuZ2xpc2hfSExT/playlist.m3u8?ads.wurl_channel=1781&ads.wurl_name=FIFAPlusEnglish
+
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
+https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
