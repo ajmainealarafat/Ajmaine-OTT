@@ -21,7 +21,8 @@ http://wo0dyefk.dienalt.org/iptv/DV3AC2Q6YSR9XE/2531/index.m3u8
 #EXTINF:-1 tvg-id="ArenaSports2" tvg-logo="https://ajmaine-al-arafat.ct.ws/arenapremium.jpg" group-title="Football", Arena Sports Premium 2
 https://tiger-hub.vercel.app/Arena-Sports/Premium_2/tracks-v1a1/mono.ts.m3u8
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/Q3F9JyKH/T-Sports.jpg",T Sports HD
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Q3F9JyKH/T-Sports.jpg" group-title="Sports",T Sports HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
 https://tvsen7.aynascope.net/tsportshd/index.m3u8?e=1762038913&u=5448cf91-5746-4e78-a357-d45dca5c1ab9&token=5ab9d8853f12fa57d79c3d4b6050d33f
 
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/Ajmaineott.jpg" group-title="Ajmaine OTT", Ajmaine OTT
@@ -119,6 +120,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
