@@ -3,72 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ajmaine • Neon Dev Space</title>
-  <meta name="description" content="Smart Neon UI by Ajmaine — Modern & Futuristic Style" />
+  <title>Ajmaine • Smart Dev Space</title>
+  <meta name="description" content="A modern neon-blue styled developer portfolio by Ajmaine" />
+
+  <!-- ✅ Bangla Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     body {
       font-family: 'Noto Sans Bengali', sans-serif;
-      background: #ffffff;
-      color: #111827;
+      background: #fdfdfd;
+      color: #1e293b;
       overflow-x: hidden;
     }
-    /* 🔷 Neon Effects */
+
+    /* ✨ Soft Neon Gradient Border Animation */
     .neon-border {
       border: 2px solid transparent;
       background: linear-gradient(white, white) padding-box,
-                  linear-gradient(120deg, #3b82f6, #60a5fa, #93c5fd) border-box;
-      animation: borderMove 5s linear infinite;
+                  linear-gradient(135deg, #60a5fa, #3b82f6, #2563eb) border-box;
+      animation: borderFlow 6s linear infinite;
+      background-size: 300% 300%;
     }
-    @keyframes borderMove {
+    @keyframes borderFlow {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
+
+    /* 💠 Subtle Neon Text */
     .neon-text {
-      color: #3b82f6;
-      text-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6;
+      color: #2563eb;
+      text-shadow: 0 0 4px #93c5fd, 0 0 8px #60a5fa;
     }
+
+    /* 🌈 Button / Link Glow */
     .glow-link {
-      border: 1.5px solid rgba(59,130,246,0.4);
-      box-shadow: 0 0 12px rgba(59,130,246,0.7);
-      transition: all 0.3s ease;
+      border: 1.5px solid rgba(59,130,246,0.3);
+      box-shadow: 0 0 6px rgba(59,130,246,0.3);
+      transition: all 0.25s ease;
     }
     .glow-link:hover {
-      background: rgba(59,130,246,0.1);
-      box-shadow: 0 0 25px rgba(59,130,246,0.9);
+      background: rgba(59,130,246,0.05);
+      box-shadow: 0 0 12px rgba(59,130,246,0.6);
     }
+
+    /* 🖱️ Copy Button */
     .copy-btn:hover {
-      background: #3b82f6;
+      background: #2563eb;
       color: white;
+      box-shadow: 0 0 10px rgba(37,99,235,0.5);
     }
   </style>
 </head>
 
 <body class="antialiased">
 
-  <!-- 🧠 Header -->
-  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-6 text-center sticky top-0 z-50">
-    <h1 class="text-4xl font-bold neon-text">Ajmaine • Creative Dev Space</h1>
+  <!-- 🌐 Header -->
+  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-6 text-center sticky top-0 z-50 shadow">
+    <h1 class="text-3xl md:text-4xl font-bold neon-text">Ajmaine • Smart Dev Space</h1>
   </header>
 
-  <!-- 💻 Hero Section -->
+  <!-- 💻 Hero -->
   <section class="max-w-4xl mx-auto text-center py-14 px-6">
     <div class="rounded-3xl neon-border overflow-hidden shadow-lg">
       <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
-           alt="Coding Hero" class="w-full object-cover h-64 md:h-80">
+           alt="Coding Hero" class="w-full h-64 md:h-80 object-cover">
     </div>
   </section>
 
-  <!-- 📋 Info Section -->
+  <!-- 📄 Info -->
   <section class="max-w-3xl mx-auto text-center px-6 pb-10">
     <h2 class="text-3xl font-bold mb-3 neon-text">আমার অফিসিয়াল প্রোফাইল</h2>
     <p class="text-slate-600 mb-6 leading-relaxed">
-      আমি আজমাইন আল আরাফাত — একজন ক্রিয়েটিভ ডেভেলপার, টুল ক্রিয়েটর ও প্রজেক্ট বিল্ডার।  
-      স্মার্ট সিস্টেম, ইসলামিক অ্যাপ ও অটোমেশন টুলস তৈরি করা আমার কাজের মূল ফোকাস।
+      আমি <span class="font-semibold text-slate-800">আজমাইন আল আরাফাত</span> — একজন ক্রিয়েটিভ ডেভেলপার ও প্রজেক্ট বিল্ডার।  
+      ওয়েব, ইসলামিক অ্যাপ, আর অটোমেশন টুলস তৈরি করি আধুনিক ডিজাইন ও পারফরম্যান্স মাথায় রেখে।  
+      নিচে আমার অফিসিয়াল সাইটের লিংক দেওয়া আছে 👇
     </p>
 
-    <!-- 🔗 Link Copy Section -->
+    <!-- 🔗 Copy Link -->
     <div class="flex items-center justify-center gap-2 max-w-md mx-auto mb-10">
       <input id="linkText" value="https://ajmaine.dev" readonly
         class="flex-1 px-4 py-3 border rounded-xl glow-link text-center select-all" />
@@ -77,39 +92,41 @@
       </button>
     </div>
 
-    <!-- ✨ Stylish Dynamic Text -->
+    <!-- ✨ Animated Text -->
     <div class="text-2xl font-semibold tracking-wide neon-text animate-pulse">
       App Name • Website Name • Smart Tool • Project Name
     </div>
   </section>
 
-  <!-- 🌐 Social Links -->
+  <!-- 🌈 Social Links -->
   <section class="text-center pb-16">
-    <div class="flex justify-center gap-6">
-      <a href="https://t.me/ajmaine" target="_blank" class="glow-link rounded-full p-3">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/telegram.svg" alt="Telegram" class="w-6 h-6 invert" />
+    <div class="flex justify-center gap-8">
+      <a href="https://t.me/ajmaine" target="_blank" class="glow-link rounded-full p-3 bg-white shadow hover:scale-105">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
+             alt="Telegram" class="w-7 h-7" style="filter: drop-shadow(0 0 5px #229ED9); color:#229ED9;">
       </a>
-      <a href="https://github.com/ajmaine" target="_blank" class="glow-link rounded-full p-3">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/github.svg" alt="GitHub" class="w-6 h-6 invert" />
+      <a href="https://github.com/ajmaine" target="_blank" class="glow-link rounded-full p-3 bg-white shadow hover:scale-105">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
+             alt="GitHub" class="w-7 h-7" style="filter: drop-shadow(0 0 5px #000000);">
       </a>
     </div>
   </section>
 
   <!-- 💫 Footer -->
-  <footer class="rounded-t-3xl neon-border bg-white/80 backdrop-blur-md text-center py-6">
+  <footer class="rounded-t-3xl neon-border bg-white/90 backdrop-blur-md text-center py-6 shadow-inner">
     <p class="text-sm text-slate-600">
       © 2025 <span class="neon-text font-semibold">Ajmaine.dev</span> — All Rights Reserved
     </p>
   </footer>
 
-  <!-- 📋 Copy Script -->
+  <!-- ✂️ Copy Script -->
   <script>
-    document.getElementById('copyBtn').addEventListener('click', () => {
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn.addEventListener('click', () => {
       const text = document.getElementById('linkText');
       navigator.clipboard.writeText(text.value);
-      const btn = document.getElementById('copyBtn');
-      btn.innerText = "✅ Copied!";
-      setTimeout(() => btn.innerText = "📋 Copy", 1500);
+      copyBtn.innerText = "✅ Copied!";
+      setTimeout(() => copyBtn.innerText = "📋 Copy", 1500);
     });
   </script>
 </body>
