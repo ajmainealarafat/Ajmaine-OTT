@@ -6,16 +6,21 @@
   <title>Ajmaine • Smart Dev Space</title>
   <meta name="description" content="Smart Developer Portfolio of Ajmaine Al Arafat" />
 
-  <!-- 🧠 Font Load -->
+  <!-- ✅ Bangla Font Fix -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: "SolaimanLipi";
+      src: url("https://cdn.jsdelivr.net/gh/ruhulaminrul/SolaimanLipi@latest/SolaimanLipi.ttf");
+    }
+  </style>
 
   <!-- ⚡ Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* ✅ Font & Base */
     body {
       font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', sans-serif;
       background: radial-gradient(circle at top left, #f9fbff, #ffffff);
@@ -29,7 +34,6 @@
       100% { background: radial-gradient(circle at bottom right, #eaf3ff, #f9fbff); }
     }
 
-    /* ✨ Neon Border */
     .neon-border {
       border: 2px solid transparent;
       background: linear-gradient(white, white) padding-box,
@@ -42,13 +46,11 @@
       100% { background-position: 100% 50%; }
     }
 
-    /* 💡 Text Glow */
     .neon-text {
       color: #2563eb;
       text-shadow: 0 0 6px #93c5fd, 0 0 10px #60a5fa;
     }
 
-    /* 🌈 Hover Glow */
     .hover-glow {
       transition: all 0.25s ease;
     }
@@ -57,7 +59,6 @@
       box-shadow: 0 0 20px rgba(59,130,246,0.4);
     }
 
-    /* 🎬 Loader Animation */
     #loader {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -82,10 +83,9 @@
       40% { transform: scale(1); }
     }
 
-    /* 🪄 Parallax */
     .parallax {
       background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80');
-      min-height: 350px;
+      min-height: 320px;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -103,18 +103,19 @@
     <div class="dot"></div>
   </div>
 
-  <!-- 🌐 Header -->
-  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-6 text-center sticky top-0 shadow">
-    <h1 class="text-3xl md:text-4xl font-bold neon-text">Ajmaine • Smart Dev Space</h1>
+  <!-- 🌐 Header (smaller + logo) -->
+  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-3 text-center sticky top-0 shadow flex justify-center items-center gap-3">
+    <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Logo" class="w-10 h-10">
+    <h1 class="text-2xl md:text-3xl font-bold neon-text">Ajmaine • Smart Dev Space</h1>
   </header>
 
-  <!-- 💻 Hero Parallax -->
-  <section class="max-w-5xl mx-auto text-center py-16 px-6">
+  <!-- 💻 Hero -->
+  <section class="max-w-5xl mx-auto text-center py-12 px-6">
     <div class="parallax shadow-lg neon-border"></div>
   </section>
 
   <!-- 📜 About -->
-  <section class="max-w-4xl mx-auto text-center px-6 pb-14">
+  <section class="max-w-4xl mx-auto text-center px-6 pb-12">
     <h2 class="text-3xl font-bold neon-text mb-4">আমার সম্পর্কে</h2>
     <p class="text-slate-600 leading-relaxed">
       আমি <span class="font-semibold text-slate-800">আজমাইন আল আরাফাত</span> — একজন ক্রিয়েটিভ ডেভেলপার ও প্রজেক্ট বিল্ডার।  
@@ -122,19 +123,8 @@
     </p>
   </section>
 
-  <!-- 🔗 Copyable Link -->
-  <section class="text-center mb-10">
-    <div class="flex items-center justify-center gap-2 max-w-md mx-auto">
-      <input id="linkText" value="https://ajmaine.dev" readonly
-        class="flex-1 px-4 py-3 border rounded-xl neon-border text-center select-all">
-      <button id="copyBtn" class="hover-glow px-4 py-3 rounded-xl border font-semibold text-slate-800">
-        📋 Copy
-      </button>
-    </div>
-  </section>
-
-  <!-- 🧠 Skills -->
-  <section class="max-w-4xl mx-auto text-center py-10">
+  <!-- ⚙️ Skills -->
+  <section class="max-w-4xl mx-auto text-center py-6">
     <h2 class="text-2xl font-bold mb-4 neon-text">আমার স্কিলস</h2>
     <div class="flex flex-wrap justify-center gap-3">
       <span class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-semibold">HTML / CSS</span>
@@ -144,8 +134,27 @@
     </div>
   </section>
 
+  <!-- 📱 App Grid Section -->
+  <section class="max-w-5xl mx-auto px-6 py-10 text-center">
+    <h2 class="text-2xl font-bold neon-text mb-6">আমার প্রজেক্ট ও অ্যাপসমূহ</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="neon-border rounded-2xl p-6 hover-glow shadow-lg">
+        <h3 class="text-xl font-bold neon-text mb-2">🎬 Autho IPTV</h3>
+        <p class="text-slate-600 text-sm">লাইভ টিভি ও স্ট্রিমিং অ্যাপ</p>
+      </div>
+      <div class="neon-border rounded-2xl p-6 hover-glow shadow-lg">
+        <h3 class="text-xl font-bold neon-text mb-2">📺 IPTV Player</h3>
+        <p class="text-slate-600 text-sm">সব ফরম্যাটের প্লেলিস্ট সাপোর্ট</p>
+      </div>
+      <div class="neon-border rounded-2xl p-6 hover-glow shadow-lg">
+        <h3 class="text-xl font-bold neon-text mb-2">⚡ Streamer</h3>
+        <p class="text-slate-600 text-sm">স্মার্ট স্ট্রিমিং প্ল্যাটফর্ম</p>
+      </div>
+    </div>
+  </section>
+
   <!-- 🌈 Social -->
-  <section class="text-center py-12">
+  <section class="text-center py-10">
     <div class="flex justify-center gap-8">
       <a href="https://t.me/ajmaine" target="_blank" class="hover-glow rounded-full p-3 bg-white shadow">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
@@ -165,20 +174,11 @@
     </p>
   </footer>
 
-  <!-- 🧩 JS: Loader + Copy -->
+  <!-- JS -->
   <script>
     // Loader Hide
     window.addEventListener("load", () => {
       document.getElementById("loader").style.display = "none";
-    });
-
-    // Copy Link
-    const copyBtn = document.getElementById('copyBtn');
-    copyBtn.addEventListener('click', () => {
-      const text = document.getElementById('linkText');
-      navigator.clipboard.writeText(text.value);
-      copyBtn.innerText = "✅ Copied!";
-      setTimeout(() => copyBtn.innerText = "📋 Copy", 1500);
     });
   </script>
 </body>
