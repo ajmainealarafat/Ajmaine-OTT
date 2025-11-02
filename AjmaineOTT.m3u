@@ -3,8 +3,20 @@
 #EXTINF:-1 tvg-id="f19328c5c772" tvg-name="ICC Women's Cricket World Cup 2025" tvg-country="IN" tvg-logo="https://ajmaine-al-arafat.ct.ws/ICCWomens.jpg" tvg-chno="f19328c5c772" group-title="",ICC Women's Cricket World Cup 2025 
 https://toffee.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-asiacup%2Fmaster_1300.m3u8
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL 
+#EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL S1
 https://sony2.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-1%2Fmaster_1300.m3u8
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL S2
+https://sony5.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-2%2F5%2Fmaster_1300.m3u8
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL S3
+https://epl1.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-3%2F5%2Fmaster_130020251102070716252.ts
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL S4
+https://epl.ratulhasan2a.workers.dev/?url=https://mprod-cdn.toffeelive.com/live/match-4/index.m3u8
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL S5
+https://sony5.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-5%2F5%2Fmaster_130020251102070611560.ts
 
 #EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/arenamain1.jpg",Arena Sport 1 HD
 http://78.108.251.7/Arena_Sport_1/index.m3u8
@@ -70,17 +82,8 @@ https://a204aivottepl-a.akamaihd.net/sin-nitro/live/clients/dash/enc/fdb3pubmek/
 #KODIPROP:inputstream.adaptive.license_key=065051b99bf5cf8d9a3bde5cbde6aaf9:214bd176832872339ce184338320f9a2
 https://a166aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/clients/dash/enc/inpyms8ezu/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
 
-#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
-http://10.16.100.213:8080/hls/tsports.m3u8
-
-#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
-http://10.16.100.206:8080/hls/tsports.m3u8
-
-#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
-http://116.204.149.16/t_sports/index.m3u8
-
-#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD
-http://103.151.60.204/T-Sports/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD S2
+https://ratul122.ratulhasan2a.workers.dev/?url=http%3A%2F%2Fstvlive.net%3A8080%2Ftsports1%2Ftracks-v1a1%2Fmono.m3u8
 
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tapmadtv.jpg" group-title="Ajmaine OTT",TAPMAD
 https://premierleagpl23.akamaized.net/hls/live/2107108/TapSerie-1@2025/master.m3u8
@@ -123,6 +126,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
