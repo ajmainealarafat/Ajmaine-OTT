@@ -1,5 +1,8 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-id="f19328c5c772" tvg-name="ICC Women's Cricket World Cup 2025" tvg-country="IN" tvg-logo="https://ajmaine-al-arafat.ct.ws/ICCWomens.jpg" tvg-chno="f19328c5c772" group-title="",ICC Women's Cricket World Cup 2025 
+https://bongoflixbd.top/test/live.php?id=match-asiacup&e=.m3u8
+
 #EXTINF:-1 group-title="Sports" tvg-logo="https://ajmaine-al-arafat.ct.ws/epllogo.jpg",EPL 
 https://sony2.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-1%2Fmaster_1300.m3u8
 
@@ -120,6 +123,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
