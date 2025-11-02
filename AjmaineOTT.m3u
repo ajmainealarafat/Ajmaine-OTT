@@ -1,5 +1,8 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-id="f19328c5c772" tvg-name="ICC Women's Cricket World Cup 2025" tvg-country="IN" tvg-logo="https://ajmaine-al-arafat.ct.ws/ICCWomens.jpg" tvg-chno="f19328c5c772" group-title="",bein 
+https://aba5sdmaaaaaaaamooyrewxky2c4j.otte.live.cf.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd
+
 #EXTINF:-1 tvg-id="f19328c5c772" tvg-name="ICC Women's Cricket World Cup 2025" tvg-country="IN" tvg-logo="https://ajmaine-al-arafat.ct.ws/ICCWomens.jpg" tvg-chno="f19328c5c772" group-title="",ICC Women's Cricket World Cup 2025 
 https://toffee.ratulhasan2a.workers.dev/?url=https%3A%2F%2Fmprod-cdn.toffeelive.com%2Flive%2Fmatch-asiacup%2Fmaster_1300.m3u8
 
@@ -126,6 +129,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
