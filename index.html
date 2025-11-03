@@ -1,212 +1,223 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>আজমাইন • Smart Dev Space</title>
-  <meta name="description" content="Smart Developer Portfolio of Ajmaine Al Arafat" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>আজমাইন • Smart Dev Space</title>
 
-  <!-- ✅ Bangla Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    @font-face {
-      font-family: "SolaimanLipi";
-      src: url("https://cdn.jsdelivr.net/gh/ruhulaminrul/SolaimanLipi@latest/SolaimanLipi.ttf");
-    }
-  </style>
+<!-- ✅ Bangla Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("https://cdn.jsdelivr.net/gh/ruhulaminrul/SolaimanLipi@latest/SolaimanLipi.ttf");
+}
+</style>
 
-  <!-- ⚡ Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<!-- ⚡ Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    body {
-      font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif !important;
-      background: radial-gradient(circle at top left, #f9fbff, #ffffff);
-      color: #1e293b;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      animation: bgPulse 12s ease-in-out infinite alternate;
-    }
-    @keyframes bgPulse {
-      0% { background: radial-gradient(circle at top left, #f0f7ff, #ffffff); }
-      100% { background: radial-gradient(circle at bottom right, #eaf3ff, #f9fbff); }
-    }
+<style>
+body {
+  font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif !important;
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  color: #1e293b;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-    .neon-border {
-      border: 2px solid transparent;
-      background: linear-gradient(white, white) padding-box,
-                  linear-gradient(135deg, #60a5fa, #2563eb, #1e3a8a) border-box;
-      background-size: 300% 300%;
-      animation: borderFlow 6s linear infinite;
-    }
-    @keyframes borderFlow {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
+/* 🔹 GPU Performance Boost */
+* {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
 
-    .neon-text {
-      color: #2563eb;
-      text-shadow: 0 0 5px #93c5fd, 0 0 10px #60a5fa;
-    }
+/* ✨ Neon Border */
+.neon-border {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #3b82f6, #1e40af, #60a5fa) border-box;
+  background-size: 250% 250%;
+  animation: borderFlow 10s linear infinite;
+}
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
-    .hover-glow {
-      transition: all 0.25s ease;
-    }
-    .hover-glow:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(59,130,246,0.4);
-    }
+/* 💡 Neon Text */
+.neon-text {
+  color: #1e3a8a;
+  text-shadow: 0 0 4px #60a5fa, 0 0 8px #93c5fd;
+}
 
-    #loader {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    .dot {
-      width: 12px;
-      height: 12px;
-      margin: 0 6px;
-      background-color: #3b82f6;
-      border-radius: 50%;
-      animation: bounce 1.2s infinite;
-    }
-    .dot:nth-child(2) { animation-delay: 0.2s; }
-    .dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes bounce {
-      0%, 80%, 100% { transform: scale(0); }
-      40% { transform: scale(1); }
-    }
+/* 💻 Hero Section (Cinematic Parallax) */
+.hero {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 2rem;
+  perspective: 800px;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  animation: cinematicPan 15s ease-in-out infinite alternate;
+  filter: brightness(1.05) saturate(1.1);
+}
+@keyframes cinematicPan {
+  0% { transform: scale(1.1) translateZ(0) translateY(-8px); }
+  100% { transform: scale(1.15) translateZ(30px) translateY(8px); }
+}
 
-    .parallax {
-      background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80');
-      min-height: 320px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: 2rem;
-    }
-  </style>
+/* Mobile disable parallax */
+@media (max-width: 768px) {
+  .hero img { animation: none; transform: scale(1.05); }
+}
+
+/* 🔗 Hover */
+.hover-glow {
+  transition: all 0.25s ease;
+}
+.hover-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(37,99,235,0.25);
+}
+
+/* Loader simplified */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+  margin: 0 4px;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.7); }
+  40% { transform: scale(1); }
+}
+</style>
 </head>
 
 <body class="antialiased">
-  <!-- 🎬 Loader -->
-  <div id="loader">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
+
+<!-- 🎬 Loader -->
+<div id="loader">
+  <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+</div>
+
+<!-- 🌐 Header -->
+<header class="neon-border rounded-b-2xl bg-white/90 backdrop-blur-md py-2 text-center sticky top-0 z-50 flex flex-col items-center gap-1 shadow">
+  <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Logo" class="w-10 h-10">
+  <h1 class="text-xl md:text-2xl font-bold neon-text">আজমাইন • Smart Dev Space</h1>
+</header>
+
+<!-- 🎞️ Cinematic Hero -->
+<section class="max-w-5xl mx-auto text-center py-10 px-6">
+  <div class="hero neon-border shadow-lg hover-glow">
+    <img src="https://images.unsplash.com/photo-1553484771-9e1c6b4b3a61?auto=format&fit=crop&w=1200&q=80" alt="Hero Image">
   </div>
+</section>
 
-  <!-- 🌐 Header -->
-  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-4 text-center sticky top-0 shadow flex flex-col items-center gap-2">
-    <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Logo" class="w-14 h-14">
-    <h1 class="text-2xl md:text-3xl font-bold neon-text">আজমাইন • Smart Dev Space</h1>
-  </header>
+<!-- 📜 About -->
+<section class="max-w-4xl mx-auto text-center px-6 pb-8">
+  <h2 class="text-2xl font-bold neon-text mb-3">আমার সম্পর্কে</h2>
+  <p class="text-slate-600 leading-relaxed">
+    আমি <span class="font-semibold text-slate-800">আজমাইন আল আরাফাত</span> — একজন ক্রিয়েটিভ ডেভেলপার ও প্রজেক্ট বিল্ডার।  
+    আমি ভালোবাসি স্মার্ট, মিনিমাল ও ইনোভেটিভ সলিউশন তৈরি করতে।
+  </p>
+</section>
 
-  <!-- 💻 Hero -->
-  <section class="max-w-5xl mx-auto text-center py-12 px-6">
-    <div class="parallax shadow-lg neon-border"></div>
-  </section>
+<!-- ⚙️ Skills -->
+<section class="max-w-4xl mx-auto text-center py-4">
+  <h2 class="text-xl font-bold mb-3 neon-text">আমার স্কিলস</h2>
+  <div class="flex flex-wrap justify-center gap-3">
+    <span class="px-3 py-1.5 rounded-xl bg-blue-100 text-blue-700 font-semibold">HTML / CSS</span>
+    <span class="px-3 py-1.5 rounded-xl bg-sky-100 text-sky-700 font-semibold">JavaScript</span>
+    <span class="px-3 py-1.5 rounded-xl bg-indigo-100 text-indigo-700 font-semibold">PHP / API</span>
+    <span class="px-3 py-1.5 rounded-xl bg-cyan-100 text-cyan-700 font-semibold">Automation</span>
+  </div>
+</section>
 
-  <!-- 📜 About -->
-  <section class="max-w-4xl mx-auto text-center px-6 pb-12">
-    <h2 class="text-3xl font-bold neon-text mb-4">আমার সম্পর্কে</h2>
-    <p class="text-slate-600 leading-relaxed">
-      আমি <span class="font-semibold text-slate-800">আজমাইন আল আরাফাত</span> — একজন ক্রিয়েটিভ ডেভেলপার ও প্রজেক্ট বিল্ডার।  
-      ওয়েব অ্যাপ, ইসলামিক টুলস, ও স্মার্ট সিস্টেম তৈরি করি পারফরম্যান্স, ডিজাইন ও স্মার্টনেস মাথায় রেখে।
-    </p>
-  </section>
+<!-- 🔗 Link Copy -->
+<section class="max-w-4xl mx-auto text-center py-10 px-6">
+  <h2 class="text-xl font-bold neon-text mb-3">🔗 অফিসিয়াল লিংক</h2>
+  <div class="flex justify-center items-center gap-2 bg-white neon-border rounded-2xl p-3 shadow hover-glow">
+    <input id="myLink" type="text" readonly value="https://ajmaine.github.io"
+      class="w-60 md:w-80 text-center font-semibold text-blue-700 outline-none bg-transparent">
+    <button id="copyBtn" class="px-3 py-1.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition relative text-sm">
+      📋 Copy
+      <span id="copyMsg" class="absolute -top-5 left-1/2 -translate-x-1/2 text-xs text-blue-600 font-semibold opacity-0 transition-opacity">Copied!</span>
+    </button>
+  </div>
+</section>
 
-  <!-- ⚙️ Skills -->
-  <section class="max-w-4xl mx-auto text-center py-6">
-    <h2 class="text-2xl font-bold mb-4 neon-text">আমার স্কিলস</h2>
-    <div class="flex flex-wrap justify-center gap-3">
-      <span class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-semibold">HTML / CSS</span>
-      <span class="px-4 py-2 rounded-xl bg-sky-100 text-sky-700 font-semibold">JavaScript</span>
-      <span class="px-4 py-2 rounded-xl bg-indigo-100 text-indigo-700 font-semibold">PHP / API</span>
-      <span class="px-4 py-2 rounded-xl bg-cyan-100 text-cyan-700 font-semibold">Automation</span>
+<!-- 📱 App Grid -->
+<section class="max-w-5xl mx-auto px-6 py-8 text-center">
+  <h2 class="text-xl font-bold neon-text mb-5">আমার প্রজেক্ট ও অ্যাপসমূহ</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="neon-border rounded-xl p-5 hover-glow shadow">
+      <h3 class="text-lg font-bold neon-text mb-1">🎬 Autho IPTV</h3>
+      <p class="text-slate-600 text-sm">লাইভ টিভি ও স্ট্রিমিং অ্যাপ</p>
     </div>
-  </section>
-
-  <!-- 🔗 Link Copy Section -->
-  <section class="max-w-4xl mx-auto text-center py-10 px-6">
-    <h2 class="text-2xl font-bold neon-text mb-4">🔗 আমার অফিসিয়াল লিংক</h2>
-    <p class="text-slate-600 mb-4">নিচের লিংকটি কপি করে অন্যদের সাথে শেয়ার করতে পারো 👇</p>
-    
-    <div class="flex justify-center items-center gap-3 bg-white neon-border rounded-2xl p-4 shadow hover-glow">
-      <input id="myLink" 
-             type="text" 
-             readonly 
-             value="https://ajmaine.github.io"
-             class="w-64 md:w-80 text-center font-semibold text-blue-700 outline-none bg-transparent">
-      <button id="copyBtn" 
-              class="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition relative">
-        📋 Copy
-        <span id="copyMsg" class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs text-blue-600 font-semibold opacity-0 transition-opacity">Copied!</span>
-      </button>
+    <div class="neon-border rounded-xl p-5 hover-glow shadow">
+      <h3 class="text-lg font-bold neon-text mb-1">📺 IPTV Player</h3>
+      <p class="text-slate-600 text-sm">সব ফরম্যাটের প্লেলিস্ট সাপোর্ট</p>
     </div>
-  </section>
-
-  <!-- 📱 App Grid -->
-  <section class="max-w-5xl mx-auto px-6 py-10 text-center">
-    <h2 class="text-2xl font-bold neon-text mb-6">আমার প্রজেক্ট ও অ্যাপসমূহ</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div class="neon-border rounded-2xl p-6 hover-glow shadow-lg">
-        <h3 class="text-xl font-bold neon-text mb-2">🎬 Autho IPTV</h3>
-        <p class="text-slate-600 text-sm">লাইভ টিভি ও স্ট্রিমিং অ্যাপ</p>
-      </div>
-      <div class="neon-border rounded-2xl p-6 hover-glow shadow-lg">
-        <h3 class="text-xl font-bold neon-text mb-2">📺 IPTV Player</h3>
-        <p class="text-slate-600 text-sm">সব ফরম্যাটের প্লেলিস্ট সাপোর্ট</p>
-      </div>
-      <div class="neon-border rounded-2xl p-6 hover-glow shadow-lg">
-        <h3 class="text-xl font-bold neon-text mb-2">⚡ Streamer</h3>
-        <p class="text-slate-600 text-sm">স্মার্ট স্ট্রিমিং প্ল্যাটফর্ম</p>
-      </div>
+    <div class="neon-border rounded-xl p-5 hover-glow shadow">
+      <h3 class="text-lg font-bold neon-text mb-1">⚡ Streamer</h3>
+      <p class="text-slate-600 text-sm">স্মার্ট স্ট্রিমিং প্ল্যাটফর্ম</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 🌈 Social -->
-  <section class="text-center py-10">
-    <div class="flex justify-center gap-8">
-      <a href="https://t.me/ajmaine" target="_blank" class="hover-glow rounded-full p-3 bg-white shadow">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
-             alt="Telegram" class="w-7 h-7" style="filter: drop-shadow(0 0 5px #229ED9);">
-      </a>
-      <a href="https://github.com/ajmaine" target="_blank" class="hover-glow rounded-full p-3 bg-white shadow">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
-             alt="GitHub" class="w-7 h-7" style="filter: drop-shadow(0 0 5px #000);">
-      </a>
-    </div>
-  </section>
+<!-- 🌈 Social -->
+<section class="text-center py-8">
+  <div class="flex justify-center gap-8">
+    <a href="https://t.me/ajmaine" target="_blank" class="hover-glow rounded-full p-2 bg-white shadow">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" class="w-6 h-6" style="filter: drop-shadow(0 0 3px #229ED9);">
+    </a>
+    <a href="https://github.com/ajmaine" target="_blank" class="hover-glow rounded-full p-2 bg-white shadow">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="w-6 h-6" style="filter: drop-shadow(0 0 3px #000);">
+    </a>
+  </div>
+</section>
 
-  <!-- 💫 Footer -->
-  <footer class="neon-border rounded-t-3xl bg-white/90 backdrop-blur-md text-center py-6 shadow-inner">
-    <p class="text-sm text-slate-600">
-      © 2025 <span class="neon-text font-semibold">Ajmaine.dev</span> — All Rights Reserved
-    </p>
-  </footer>
+<!-- 💫 Footer -->
+<footer class="neon-border rounded-t-2xl bg-white/90 backdrop-blur-md text-center py-5 shadow-inner">
+  <p class="text-sm text-slate-600">
+    © 2025 <span class="neon-text font-semibold">Ajmaine.dev</span> — All Rights Reserved
+  </p>
+</footer>
 
-  <!-- JS -->
-  <script>
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-
-    // Copy button logic
-    const btn = document.getElementById("copyBtn");
-    const input = document.getElementById("myLink");
-    const msg = document.getElementById("copyMsg");
-
-    btn.addEventListener("click", () => {
-      navigator.clipboard.writeText(input.value);
-      msg.style.opacity = "1";
-      setTimeout(() => msg.style.opacity = "0", 1500);
-    });
-  </script>
+<!-- JS -->
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+const btn = document.getElementById("copyBtn");
+const input = document.getElementById("myLink");
+const msg = document.getElementById("copyMsg");
+btn.addEventListener("click", () => {
+  navigator.clipboard.writeText(input.value);
+  msg.style.opacity = "1";
+  setTimeout(() => msg.style.opacity = "0", 1500);
+});
+</script>
 </body>
 </html>
+
