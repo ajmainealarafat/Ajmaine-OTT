@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ajmaine • Smart Dev Space</title>
+  <title>আজমাইন • Smart Dev Space</title>
   <meta name="description" content="Smart Developer Portfolio of Ajmaine Al Arafat" />
 
-  <!-- ✅ Bangla Font Fix -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✅ Bangla Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
@@ -22,12 +20,12 @@
 
   <style>
     body {
-      font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', sans-serif;
+      font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif !important;
       background: radial-gradient(circle at top left, #f9fbff, #ffffff);
-      animation: bgPulse 10s ease-in-out infinite alternate;
       color: #1e293b;
       scroll-behavior: smooth;
       overflow-x: hidden;
+      animation: bgPulse 12s ease-in-out infinite alternate;
     }
     @keyframes bgPulse {
       0% { background: radial-gradient(circle at top left, #f0f7ff, #ffffff); }
@@ -48,7 +46,7 @@
 
     .neon-text {
       color: #2563eb;
-      text-shadow: 0 0 6px #93c5fd, 0 0 10px #60a5fa;
+      text-shadow: 0 0 5px #93c5fd, 0 0 10px #60a5fa;
     }
 
     .hover-glow {
@@ -103,10 +101,10 @@
     <div class="dot"></div>
   </div>
 
-  <!-- 🌐 Header (smaller + logo) -->
-  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-3 text-center sticky top-0 shadow flex justify-center items-center gap-3">
-    <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Logo" class="w-10 h-10">
-    <h1 class="text-2xl md:text-3xl font-bold neon-text">Ajmaine • Smart Dev Space</h1>
+  <!-- 🌐 Header -->
+  <header class="neon-border rounded-b-3xl bg-white/90 backdrop-blur-md py-4 text-center sticky top-0 shadow flex flex-col items-center gap-2">
+    <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Logo" class="w-14 h-14">
+    <h1 class="text-2xl md:text-3xl font-bold neon-text">আজমাইন • Smart Dev Space</h1>
   </header>
 
   <!-- 💻 Hero -->
@@ -134,7 +132,26 @@
     </div>
   </section>
 
-  <!-- 📱 App Grid Section -->
+  <!-- 🔗 Link Copy Section -->
+  <section class="max-w-4xl mx-auto text-center py-10 px-6">
+    <h2 class="text-2xl font-bold neon-text mb-4">🔗 আমার অফিসিয়াল লিংক</h2>
+    <p class="text-slate-600 mb-4">নিচের লিংকটি কপি করে অন্যদের সাথে শেয়ার করতে পারো 👇</p>
+    
+    <div class="flex justify-center items-center gap-3 bg-white neon-border rounded-2xl p-4 shadow hover-glow">
+      <input id="myLink" 
+             type="text" 
+             readonly 
+             value="https://ajmaine.github.io"
+             class="w-64 md:w-80 text-center font-semibold text-blue-700 outline-none bg-transparent">
+      <button id="copyBtn" 
+              class="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition relative">
+        📋 Copy
+        <span id="copyMsg" class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs text-blue-600 font-semibold opacity-0 transition-opacity">Copied!</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- 📱 App Grid -->
   <section class="max-w-5xl mx-auto px-6 py-10 text-center">
     <h2 class="text-2xl font-bold neon-text mb-6">আমার প্রজেক্ট ও অ্যাপসমূহ</h2>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -176,9 +193,19 @@
 
   <!-- JS -->
   <script>
-    // Loader Hide
     window.addEventListener("load", () => {
       document.getElementById("loader").style.display = "none";
+    });
+
+    // Copy button logic
+    const btn = document.getElementById("copyBtn");
+    const input = document.getElementById("myLink");
+    const msg = document.getElementById("copyMsg");
+
+    btn.addEventListener("click", () => {
+      navigator.clipboard.writeText(input.value);
+      msg.style.opacity = "1";
+      setTimeout(() => msg.style.opacity = "0", 1500);
     });
   </script>
 </body>
