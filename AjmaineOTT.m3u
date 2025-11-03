@@ -46,6 +46,9 @@ http://103.175.242.10:8080/tsports1/index.m3u8
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/Ajmaineott.jpg" group-title="Ajmaine OTT", Ajmaine OTT
 https://live20.bozztv.com/akamaissh101/ssh101/ajmaineotttv/playlist.m3u8
 
+#EXTINF:-1 tvg-id="LIVEFOOTBALL" tvg-logo="https://ajmaine-al-arafat.ct.ws/barcatv.jpg" group-title="Ajmaine OTT",BARCA TV
+https://ratul122.aiorbd.workers.dev/?url=https%3A%2F%2Famg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv%2Fplaylist_fc18f0fd_2d126755.m3u8
+
 #EXTINF:-1 tvg-id="LIVEFOOTBALL" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/RMTV.jpg" group-title="Ajmaine OTT",Real Madrid TV
 https://rmtv.akamaized.net/hls/live/2043154/rmtv-en-web/bitrate_3.m3u8
 
@@ -129,6 +132,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
