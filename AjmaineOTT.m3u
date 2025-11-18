@@ -90,7 +90,7 @@ https://a204aivottepl-a.akamaihd.net/sin-nitro/live/clients/dash/enc/fdb3pubmek/
 https://a166aivottlinear-a.akamaihd.net/OTTB/sin-nitro/live/clients/dash/enc/inpyms8ezu/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
 
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Ajmaine OTT", T sports HD S2
-https://ratul122.ratulhasan2a.workers.dev/?url=http%3A%2F%2Fstvlive.net%3A8080%2Ftsports1%2Ftracks-v1a1%2Fmono.m3u8
+http://103.240.44.26/T-Sports-HD/index.fmp4.m3u8
 
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tapmadtv.jpg" group-title="Ajmaine OTT",TAPMAD
 https://premierleagpl23.akamaized.net/hls/live/2107108/TapSerie-1@2025/master.m3u8
@@ -133,6 +133,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
