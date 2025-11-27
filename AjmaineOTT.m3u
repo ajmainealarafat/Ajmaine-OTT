@@ -46,6 +46,9 @@ https://tiger-hub.vercel.app/Arena-Sports/Premium_2/tracks-v1a1/mono.ts.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
 http://103.240.44.26/T-Sports-HD/tracks-v1/index.fmp4.m3u8
 
+#EXTINF:-1 tvg-id="ArenaSports2" tvg-logo="https://ajmaine-al-arafat.ct.ws/media/tsportstv.jpg" group-title="Football", T Sports bd71
+https://ratul122.aiorbd.workers.dev/?url=http://stvlive.net:8080/tsports1/playlist.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/Ajmaineott.jpg" group-title="Ajmaine OTT", Ajmaine OTT
 https://abe4mdzaaaaaaaampzanwc57oxzti.otte.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/9o6jmlyjpm/out/v1/ad80a9bfecc6438f82f2af41c58d7fb8/cenc_video_6_0_5659427.mp4?m=1751974833
@@ -136,6 +139,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
