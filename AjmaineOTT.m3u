@@ -1,6 +1,7 @@
 #EXTM3U
 
 #EXTINF:-1 tvg-id="f19328c5c772" tvg-name="STAR JALSHA" tvg-country="IN" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/f/fa/Star_Jalsha_Chalo_Paltai_2019_Social_Media_Profile.jpg/revision/latest/scale-to-width-down/250?cb=20190217163855" tvg-chno="f19328c5c772" group-title="BANGLA",STAR JALSHA HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
 http://87.255.35.150:18237
 
 
@@ -143,6 +144,7 @@ https://ba3e2e93.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 #EXTINF:-1 tvg-logo="https://ajmaine-al-arafat.ct.ws/media/GoalTv.jpg" group-title="Ajmaine OTT",Goal TV
 
 https://amg00585-sportstribal-amg00585c1-sportstribal-emea-2175.playouts.now.amagi.tv/playlist/amg00585-sportstribaltvfast-goaltv-sportstribalemea/playlist.m3u8
+
 
 
 
